@@ -91,6 +91,7 @@ void event_loop(int listen_fd) {
                     i--;
                 } else {
                     //enqueue_log(buf, r); // thread-safe queue
+                    printf("%s\n", buf);
                 }
             }
         }
