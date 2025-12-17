@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-Include -O2 -Wall -Wextra -std=gnu11 -pthread
 
-SRCS=src/main.c
+SRCS=src/main.c src/log_queue.c
 OBJS=$(SRCS:.c=.o)
 
 OUT=out
