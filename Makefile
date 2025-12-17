@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-Include -O2 -Wall -Wextra -std=gnu11
+CFLAGS=-Include -O2 -Wall -Wextra -std=gnu11 -pthread
 
 SRCS=src/main.c
 OBJS=$(SRCS:.c=.o)
