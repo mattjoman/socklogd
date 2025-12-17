@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-Include -O2 -Wall -Wextra -std=gnu11 -pthread
 
-SRCS=src/main.c src/log_queue.c
+SRCS=src/main.c src/log_queue.c src/worker.c src/listener.c src/helpers.c
 OBJS=$(SRCS:.c=.o)
 
 OUT=out
@@ -10,14 +10,14 @@ all: $(OUT)
 
 # Link objects
 $(OUT): $(OBJS)
-	$(CC) $(CFLAGS) -o $@ $(OBJS)
+		$(CC) $(CFLAGS) -o $@ $(OBJS)
 
 # Compile sources
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+		$(CC) $(CFLAGS) -c $< -o $@
 
 # Clean
 clean:
-	rm -f $(OBJS) $(OUT)
+		rm -f $(OBJS) $(OUT)
 
 .PHONY: all clean
