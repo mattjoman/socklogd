@@ -3,11 +3,11 @@ CFLAGS=-Include -O2 -Wall -Wextra -std=gnu11 -pthread
 
 SERVER_SRCS=src/server/main.c src/server/log_queue.c src/server/worker.c src/server/listener.c src/server/helpers.c
 SERVER_OBJS=$(SERVER_SRCS:.c=.o)
-SERVER_OUT=socklogd
+SERVER_OUT=socklogd.out
 
 CLIENT_SRCS=src/client/main.c
 CLIENT_OBJS=$(CLIENT_SRCS:.c=.o)
-CLIENT_OUT=client
+CLIENT_OUT=client.out
 
 all: $(SERVER_OUT) $(CLIENT_OUT)
 
