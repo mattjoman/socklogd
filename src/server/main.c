@@ -153,8 +153,8 @@ int main(int argc, char *argv[]) {
     event_loop(listen_fd, q);
 
     log_queue_shutdown(q);
-
     pthread_join(tid, NULL);
+    free(q);
 
     return 0;
 }
