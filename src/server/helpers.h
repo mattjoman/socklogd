@@ -3,4 +3,6 @@
 
 void handle_error(char *message);
 
+int socket_listen();
+
 #endif

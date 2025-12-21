@@ -30,9 +30,11 @@ struct log_queue {
 
 struct log_queue *log_queue_init();
 
+void log_queue_shutdown(struct log_queue *q);
+
 void log_queue_enq(struct log_queue *q, struct log_entry ntry);
 
-struct log_entry log_queue_deq(struct log_queue *q);
+int log_queue_deq(struct log_queue *q, struct log_entry *ntry);
 
 #endif
 
